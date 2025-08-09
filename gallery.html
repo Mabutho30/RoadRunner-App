@@ -4,8 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Gallery | RoadRunner</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+  <meta name="description" content="Gallery of high-speed vehicles showcasing supercars, racecars, bikes, and Formula One racing technology." />
 </head>
 <body class="gallery">
   <header>
@@ -25,16 +26,38 @@
     <section class="gallery">
       <h2>Gallery of Speed</h2>
       <div class="gallery-grid">
-        <figure><img src="images/supercar.jpg" alt="Supercar"><figcaption>Supercar — raw power and style</figcaption></figure>
-        <figure><img src="images/racecar.jpg" alt="Racecar"><figcaption>Track Beast — precision at high Gs</figcaption></figure>
-        <figure><img src="images/racing-bike.jpg" alt="Racing Bike"><figcaption>Racing Bike — agility on two wheels</figcaption></figure>
-        <figure><img src="images/formula-one.jpg" alt="Formula One"><figcaption>Formula One — pinnacle of speed tech</figcaption></figure>
+        <figure>
+          <img src="images/supercar.jpg" alt="Supercar" onclick="openModal('images/supercar.jpg', 'Supercar — raw power and style in every curve, perfect for the thrill-seekers.')" />
+          <figcaption>Supercar — raw power and style</figcaption>
+        </figure>
+        <figure>
+          <img src="images/racecar.jpg" alt="Racecar" onclick="openModal('images/racecar.jpg', 'Track Beast — precision at high Gs, engineered for the ultimate race performance.')" />
+          <figcaption>Track Beast — precision at high Gs</figcaption>
+        </figure>
+        <figure>
+          <img src="images/racing-bike.jpg" alt="Racing Bike" onclick="openModal('images/racing-bike.jpg', 'Racing Bike — agility on two wheels, built for speed and nimbleness on the track.')" />
+          <figcaption>Racing Bike — agility on two wheels</figcaption>
+        </figure>
+        <figure>
+          <img src="images/formula-one.jpg" alt="Formula One" onclick="openModal('images/formula-one.jpg', 'Formula One — pinnacle of speed technology, combining engineering excellence with driver skill.')" />
+          <figcaption>Formula One — pinnacle of speed tech</figcaption>
+        </figure>
       </div>
     </section>
   </main>
 
+  <!-- Modal popup -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modal-img" />
+    <div id="modal-caption"></div>
+  </div>
+
   <footer>
     <p>&copy; 2025 RoadRunner. Built for the FNB App Academy competition.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
