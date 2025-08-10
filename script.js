@@ -24,3 +24,15 @@ document.addEventListener('keydown', function(event) {
     closeModal();
   }
 });
+
+// Toggle mobile nav menu
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('nav .hamburger');
+  const navLinks = document.querySelector('nav .nav-links');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  }
+});
